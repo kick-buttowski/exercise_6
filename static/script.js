@@ -410,7 +410,7 @@ async function startMessagePolling() {
 
     console.log(CURRENT_ROOM);
     getAllMsgsRequest.room_id = CURRENT_ROOM;
-    let messages = await createUrl(ALL_MESSAGES_URL, getAllMsgsRequest, 'GET')
+    let messages = await createUrl(ALL_MESSAGES_URL, getAllMsgsRequest, {}, 'GET')
     let messagesDiv = document.body.querySelector(".messages");
     let child = messagesDiv.lastElementChild;
     while (child) {
